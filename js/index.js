@@ -3,7 +3,7 @@ const allTopicLinks = document.querySelectorAll(".topic-link");
 allTopicLinks.forEach((link) => {
   link.addEventListener("click", () => {
     let fileName =
-      "./topics/" + link.className.replace("topic-link ", "") + ".html";
+      "./html/topics/" + link.className.replace("topic-link ", "") + ".html";
     location.href = fileName;
   });
 });
