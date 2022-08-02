@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Binary Search</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Binary <span>Search</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content binary-search">
+        <table class="table table-striped table-bordered table-sm">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Problem Names</th>
+              <th scope="col">Solution Writeups</th>
+              <th scope="col">Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="binary-search-pb" class="col-2">
+                <a
+                  href="https://leetcode.com/problems/binary-search/"
+                  target="_blank"
+                  >Binary Search</a
+                >
+              </td>
+              <td class="col-9">
+                <p>While start &lt;= end, updates with mid + 1 or mid - 1.</p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/binary-search.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="search-a-2d-matrix">
+                <a
+                  href="https://leetcode.com/problems/search-a-2d-matrix/"
+                  target="_blank"
+                  >Search a 2D Matrix</a
+                >
+              </td>
+              <td>
+                <p>
+                  O((logn)<sup>2</sup>). First binary search the row first
+                  element, for &lt; case, need to check if the next row first
+                  element &gt;= target, if not set row_start = row_mid + 1, else
+                  search through the row_mid row.
+                </p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/search-in-2d-matrix.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="koko-eating-bananas">
+                <a
+                  href="https://leetcode.com/problems/koko-eating-bananas/"
+                  target="_blank"
+                  >Koko Eating Bananas</a
+                >
+              </td>
+              <td>
+                <p>
+                  Find min eating speed. Binary search through 1 to max(piles).
+                  Only record the min possible speed. Take not to use "long" and
+                  "double" for C++ precision issue.
+                </p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/koko-eating-bananas.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="search-in-rotated-sorted-array">
+                <a
+                  href="https://leetcode.com/problems/search-in-rotated-sorted-array/"
+                  target="_blank"
+                  >Search in Rotated Sorted Array</a
+                >
+              </td>
+              <td>
+                <p>
+                  Binary search with modification. If <em>mid</em> is in left
+                  portion (nums[start] &lt;= nums[mid]), update
+                  <em>start</em> when nums[mid] > target || nums[start] &lt;
+                  target, else update end. If <em>mid</em> is in right portion,
+                  update <em>start</em> when nums[mid] > target && nums[end]
+                  &lt;= target.
+                </p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/search-in-rotated-sorted-array.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-2" id="find-min-in-rotated-sorted-array">
+                <a
+                  href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+                  target="_blank"
+                  >Find Min in Rotated Sorted Array</a
+                >
+              </td>
+              <td class="col-10">
+                <p>
+                  Don't find pivot position. When we have nums[start] &lt;
+                  nums[end], stop search and check if nums[start] is the min.
+                  Else, when nums[mid] >= nums[start], search through right
+                  portion and else search through left portion. Take note that
+                  min = min(nums[mid], min).
+                </p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/find-min-in-rotated-sorted-array.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="time-based-key-value-store">
+                <a
+                  href="https://leetcode.com/problems/time-based-key-value-store/"
+                  target="_blank"
+                  >Time Based Key-value Store</a
+                >
+              </td>
+              <td>
+                Create a data structure of unordered_map of string as key and
+                another map (in sorted order) with int timestamp as key and
+                string as value, as the value of the unordered_map. Then, when
+                looking at the timestamp, we need to ensure it is the previous
+                nearest timestamp in the map if that timestamp is not found.
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/time-based-key-value-store.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="median-of-two-sorted-arrays">
+                <a
+                  href="https://leetcode.com/problems/median-of-two-sorted-arrays/"
+                  target="_blank"
+                  >Median of Two Sorted Arrays</a
+                >
+              </td>
+              <td>
+                <p>
+                  The idea is that we need to first calculate the position of
+                  the median if two arrays are merged, then this value tells us
+                  the size of the partition required. Then for each nums1 and
+                  nums2 array, partition according to the binary search
+                  algorithm. And then output the median according to the median
+                  position is even or odd, if is odd then it is min(Aright,
+                  Bright). If it is even, then the answer is (max(Aleft, Bleft),
+                  min(Aright, Bright)) / 2.
+                </p>
+              </td>
+              <td class="col-1 table-code">
+                <a
+                  href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/binary/median-of-two-sorted-array.cpp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

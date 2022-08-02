@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Graphs</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Graph<span>s</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content graphs">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="number-of-islands">
+                  <a
+                    href="https://leetcode.com/problems/number-of-islands/"
+                    target="_blank"
+                    >Number of Islands</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create fixed size 2d vector as visited instead of
+                    unordered_set of pair in C++ will be much faster. The algo
+                    is like this, for each grid[i][j] == 1, if it is not
+                    visited, count + 1, then do dfs on it.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/number-of-island.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="clone-graph">
+                  <a
+                    href="https://leetcode.com/problems/clone-graph/"
+                    target="_blank"
+                    >Clone Graph</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a hash map that maps value to Node pointer to
+                    indicate that that node has been created. If it is not
+                    created, create it and add it to the hash map, then iterate
+                    through its neighbors.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/clone-graph.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="max-area-of-island">
+                  <a
+                    href="https://leetcode.com/problems/max-area-of-island/"
+                    target="_blank"
+                    >Max Area of Island</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Same as number of island question, except that now the dfs
+                    returns integer of area. Area = 1 + dfs() for 4 directions.
+                    Record the largest area.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/max-area-of-island.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="rotting-oranges">
+                  <a
+                    href="https://leetcode.com/problems/rotting-oranges/"
+                    target="_blank"
+                    >Rotting Oranges</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do BFS in parallel, so inside while (!frontier.empty()),
+                    loop through each element in queue by keep popping the front
+                    element. Since it is possible to have more than 1 rotten
+                    orange in the start, push them to frontier at the beginning.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/rotting-oranges.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="pacific-atlantic-water-flow">
+                  <a
+                    href="https://leetcode.com/problems/pacific-atlantic-water-flow/"
+                    target="_blank"
+                    >Pacific Atlantic Water Flow</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The hint is that instead of iterating through each point to
+                    determine if it can go both direction, check from the two
+                    oceans to each point. Since we know the first row and first
+                    column can go pacific and last row and last column can go
+                    atlantic, continuously do DFS to check if each point can go.
+                    We need two 2D vectors to that act as a set to store the
+                    point that can flow to each ocean.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/pac-atl-water-flow.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="course-schedule">
+                  <a
+                    href="https://leetcode.com/problems/course-schedule/"
+                    target="_blank"
+                    >Course Schedule</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Core concept is to detect if the course graph contains
+                    cycle. If yes return false, if no return true. Create a
+                    visited vector, that will mark a node as visited once it is
+                    processed. Then, for each node being processed, if it
+                    contains req that cannot be finished, return false for that
+                    node, else return true. To speed up the checking (to skip
+                    checking the requisites of the same course everytime
+                    iterating the loop), clear the pre-req of the course that
+                    can be complete, and check if a course req is empty, return
+                    true immediately.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/course-schedule.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="course-schedule-ii">
+                  <a
+                    href="https://leetcode.com/problems/course-schedule-ii/"
+                    target="_blank"
+                    >Course Schedule II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Must do topological sort. The way to do topological sort is
+                    that we have 3 states for each node, 0 means the node is
+                    unexplored/unprocessed yet, 1 means the node is processed
+                    and it forms a cycle, 2 means the node is processed and it
+                    is okay. For each node do DFS to obtain the topological sort
+                    order. Output the order when every node is processed.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/course-schedule-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="surrounded-regions">
+                  <a
+                    href="https://leetcode.com/problems/surrounded-regions/"
+                    target="_blank"
+                    >Surrounded Regions</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Instead of checking each 'O', checks from the border cells,
+                    if it is a 'O', it is not captured, and then do dfs to check
+                    if there exists any connected 'O' cells, which are also not
+                    captured.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/surrounded-regions.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="redundant-connection">
+                  <a
+                    href="https://leetcode.com/problems/redundant-connection/"
+                    target="_blank"
+                    >Redundant Connection</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Since it is guaranteed to have n nodes, we can do union-find
+                    of size n nodes. Create a parent vector and rank vector.
+                    Initially parent of each node is itself, and each rank is 1.
+                    Do union-find to merge parents with larger rank, and then
+                    update the merged nodes correspondingly. When a node that
+                    hasn't been processed with same parent has been detected,
+                    simply returned that edge.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/redundant-connection.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="walls-and-gates">
+                  <a
+                    href="https://www.youtube.com/watch?v=e69C6xhiSQE&ab_channel=NeetCode"
+                    target="_blank"
+                    >Walls and Gates</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The problem is asking that for each empty space, count the
+                    min distance from itself to the nearest gate. To do this,
+                    simply do BFS for all gates concurrently, and update each
+                    neighboring empty space.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/walls-and-gates.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="number-of-connected-components-in-graph">
+                  <a
+                    href="https://www.youtube.com/watch?v=8f1XPm4WOUc&ab_channel=NeetCode"
+                    target="_blank"
+                    >Number of Connected Components in Graph</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The problem asks for counting the number of connected
+                    components in the graph. The fastest way to do this is by
+                    doing union-find. Update count only if two nodes at first
+                    have different parents. To know the number of connected
+                    components, do n - count.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/number-of-connected-components.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="graph-valid-tree">
+                  <a
+                    href="https://www.youtube.com/watch?v=bXsUuownnoQ&ab_channel=NeetCode"
+                    target="_blank"
+                    >Graph Valid Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The problem asks to check if a graph is also a tree. To
+                    fulfill this condition, we need to ensure the graph does not
+                    contain cycle and every node is connected. The algorithm to
+                    check for cycle is to create a visited set that will add
+                    visited node inside. If a node is revisited, return false.
+                    After ensuring no cycle, before return true, check if
+                    visited.size() == number of nodes, if not, returned false,
+                    since this indicates that not all nodes are connected.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/graphs/graph-valid-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="word-ladder">
+                  <a
+                    href="https://leetcode.com/problems/word-ladder/"
+                    target="_blank"
+                    >Word Ladder</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create adjacency list where key is the word, and values are
+                    set of other words that differ by one character. Then do BFS
+                    to find minimum path, this will be O(n<sup>2</sup>m).
+                    Another way to generate adjacency list is by using the word
+                    pattern that is generated from each word, and then the value
+                    will be set of word that contains such pattern. This will
+                    give O(m<sup>2</sup>n) solution and is more suitable for
+                    this question.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/word-ladder.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="reconstruct-itinerary">
+                  <a
+                    href="https://leetcode.com/problems/reconstruct-itinerary/"
+                    target="_blank"
+                    >Reconstruct Itinerary</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do DFS topological sort, add node in reversed order. For
+                    each destination in curr, just do DFS and explore new
+                    destination, if there is no more destination available, add
+                    it to the path. Remember to reverse the order once all DFS
+                    is accomplished.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/reconstruct-itinerary.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="min-cost-to-connect-all-points">
+                  <a
+                    href="https://leetcode.com/problems/min-cost-to-connect-all-points/"
+                    target="_blank"
+                    >Min Cost To Connect All Points</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do Prim's algorithm (like Dijkstra), C++ has its own way of
+                    doing. Create a vector of size n, keep update min cost of
+                    each position each time a min cost is found. Total time
+                    complexity will be O(n<sup>2</sup>).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/min-cost-to-connect-all-point.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="swim-in-rising-water">
+                  <a
+                    href="https://leetcode.com/problems/swim-in-rising-water/"
+                    target="_blank"
+                    >Swim In Rising Water</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The question is to find maximum along the minimum path among
+                    all the paths to goal. The idea is to do Dijkstra, and then
+                    record each time that is maximum among the explored nodes so
+                    far. Loop until frontier is empty or the goal point is
+                    visited.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/swimming-in-rising-water.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="cheapest-flights-within-k-stops">
+                  <a
+                    href="https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+                    target="_blank"
+                    >Cheapest Flights Withint K Stops</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do Dijkstra, first compare the current stops number, then
+                    compare the cost. When reached goal, add to a vector. Once
+                    the frontier is empty, return the min among the vector. Skip
+                    the node if the current cost is more than the minimum cost
+                    recorded so far. (Do not simply check if it is visited,
+                    since it does not work for goal)
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/cheapest-flight-within-k-stops.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="alien-dictionary">
+                  <a
+                    href="https://www.youtube.com/watch?v=6kTZYvNNyps&ab_channel=NeetCode"
+                    target="_blank"
+                    >Alien Dictionary</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The problem asks to find the order of alphabet
+                    lexicographically. Such order cannot be found if there
+                    exists contradiction, where larger word length appears
+                    before smaller word length with same starting alphabets (can
+                    be many). Do topological sort (post-order DFS, add after
+                    visit all nodes), also detect if cycle exists. To check
+                    cycle, create a visited map, if node appears in visited with
+                    false value, it means it has been visited but not in the
+                    path, and set visited[node] = true if node visited and is in
+                    the path (that means it forms a cycle). Remember to reverse
+                    the order of the string after completing the topological
+                    sort.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/graphs/alien-dictionary.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

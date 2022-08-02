@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>1-D Dynamic Programming</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>1-D Dynamic <span>Programming</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content one-d-dp">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="climbing-stairs" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/climbing-stairs/"
+                    target="_blank"
+                    >Climbing Stairs</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    stairs[n] = stairs[n-1] + stairs[n-2]. Create storage that
+                    stores each stairs[n] to increase the speed with tradeoff of
+                    O(n) extra space.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/climbing-stairs.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="min-cost-climbing-stairs">
+                  <a
+                    href="https://leetcode.com/problems/min-cost-climbing-stairs/"
+                    target="_blank"
+                    >Min Cost Climbing Stairs</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Trick is to add one more cost with value=0, and then for
+                    each level we update cost value to cost[i] = min(cost[i-1],
+                    cost[i-2]) + cost[i]. cost[len(cost)-1] will be the answer.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/min-cost-climbing-stairs.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="house-robber">
+                  <a
+                    href="https://leetcode.com/problems/house-robber/"
+                    target="_blank"
+                    >House Robber
+                  </a>
+                </td>
+                <td>
+                  <p>
+                    Create two variables that store previous max and current
+                    max. Update current max to (nums[i] + previous max) if that
+                    is greater.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/house-robber.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="house-robber-ii">
+                  <a
+                    href="https://leetcode.com/problems/house-robber-ii/"
+                    target="_blank"
+                    >House Robber II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Key idea is house[0] and house[n-1] cannot be stolen
+                    together, so break the problem into compare two profits from
+                    stealing from house[0] to house[n-2] and house[1] to
+                    house[n-1].
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/house-robber-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="longest-palindromic-substring">
+                  <a
+                    href="https://leetcode.com/problems/longest-palindromic-substring/"
+                    target="_blank"
+                    >Longest Palindromic Substring</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Instead of Compare boundary characters, another way to check
+                    if a string is palindrome is starting at the middle
+                    character, and then expand out (left and right pointers) to
+                    see if a string is palindrome (s[left] == s[right]). To also
+                    cater even length palindrome, do another check with left =
+                    i, right = i + 1.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/longest-palindromic-substring.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="palindromic-substrings">
+                  <a
+                    href="https://leetcode.com/problems/palindromic-substrings/"
+                    target="_blank"
+                    >Palindromic Substrings</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Same trick, starts palindromic checking at middle character,
+                    and then count++ whenever it is a palindrome.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/palindromic-substrings.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="maximum-product-subarray">
+                  <a
+                    href="https://leetcode.com/problems/maximum-product-subarray/"
+                    target="_blank"
+                    >Maximum Product Subarray</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Keep track of current min and current max, when current
+                    number is negative, swap current max and current min.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/max-product-subarray.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="decode-ways">
+                  <a
+                    href="https://leetcode.com/problems/decode-ways/"
+                    target="_blank"
+                    >Decode Ways</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Core idea is dp[i] = dp[i+1] + dp[i+2] and dp[len(s)] = 1
+                    since empty string has 1 decode way. dp[i+2] is neccessary
+                    only if the two-digits number is within 10-26. Starts from
+                    dp[len(s)-1] and then dp[0] is the answer.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/decode-ways.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="coin-change">
+                  <a
+                    href="https://leetcode.com/problems/coin-change/"
+                    target="_blank"
+                    >Coin Change</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Greedy does not work! Create an array with size amount+1
+                    calls dp. The idea is that dp[amt] = 1 + dp[amt-coin] for
+                    each coin, and store only the minimum. Then, dp[amount] will
+                    be the answer. If dp[amount] is the default value, return
+                    -1.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/coin-exchange.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="word-break">
+                  <a
+                    href="https://leetcode.com/problems/word-break/"
+                    target="_blank"
+                    >Word Break</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For dynamic programming solution, dp[i] = dp[i + len(word)]
+                    for each word in wordDict. If dp[i] is true, break the loop
+                    immediately. Return dp[0] at the end.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/word-break.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="longest-increasing-subsequence">
+                  <a
+                    href="https://leetcode.com/problems/longest-increasing-subsequence/"
+                    target="_blank"
+                    >Longest Increasing Subsequence</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Start from the last element, for each number that is after
+                    the element, if that number > current element, update
+                    dp[current] to dp[number] + 1. After completing this loop,
+                    find the max in dp.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/longest-increasing-subsequences.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="partition-equal-subset-sum">
+                  <a
+                    href="https://leetcode.com/problems/partition-equal-subset-sum/"
+                    target="_blank"
+                    >Partition Equal Subset Sum</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The equal sum value must be sum(nums) // 2, if sum(nums) is
+                    odd, simply return false. Else, create a set dp, for each
+                    number in nums, can choose between add and don't add, if
+                    don't add then it will be add 0. Check also if target is in
+                    sum. If yes simply return true, else return false.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/1-d-dynamic-programming/partitioning-equal-subset-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

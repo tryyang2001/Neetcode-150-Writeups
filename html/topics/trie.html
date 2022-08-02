@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Trie/Prefix Tree</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Trie/<span>Prefix Tree</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content trie">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="implement-trie-prefix-tree">
+                  <a
+                    href="https://leetcode.com/problems/implement-trie-prefix-tree/"
+                    target="_blank"
+                    >Implement Trie Prefix Tree</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    The idea of trie is a prefix tree. Each TrieNode will
+                    contain a children list which will contain all the TrieNode
+                    it can go. So for an example of string, each character in
+                    the string will represent a TrieNode, So for example, the
+                    word "apple" will be a -> p -> p -> l -> e in a trie.
+                    Implement this, and for each node add one more boolean
+                    variable called isEndOfWord. This boolean == true only if
+                    current TrieNode is the end of the word.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/cb9c6e2ef0f7890aec3abc2a2b7cf1cf0bb32033/trie/implement-trie.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="design-add-and-search-word-data-structure">
+                  <a
+                    href="https://leetcode.com/problems/design-add-and-search-words-data-structure/"
+                    target="_blank"
+                    >Design Add and Search Word Data Structure</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Implement a trie and for inserting word, add it into the
+                    trie. To search the word, simply go through each TrieNode.
+                    To handle a '.', search all possible children (which is at
+                    most O(26) since duplicate characters will be store in the
+                    same TrieNode).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/cb9c6e2ef0f7890aec3abc2a2b7cf1cf0bb32033/trie/design-add-and-search-word-data-structure.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="word-search-ii">
+                  <a
+                    href="https://leetcode.com/problems/word-search-ii/"
+                    target="_blank"
+                    >Word Search II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The idea is that first construct a trie from the words
+                    array. Then for each position in the board, do dfs on the
+                    trie. To prevent revisited board[i][j], we can change the
+                    character on board[i][j] to some other character like '-'.
+                    But remember to change back at the end of the dfs function
+                    so that it gets restored and can be reused. This is
+                    important to pass test case like finding the word "hf" and
+                    "hlf".
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/cb9c6e2ef0f7890aec3abc2a2b7cf1cf0bb32033/trie/word-search-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

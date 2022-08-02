@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Maths & Geometry</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Maths & <span>Geometry</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content maths">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="happy-number">
+                  <a
+                    href="https://leetcode.com/problems/happy-number/"
+                    target="_blank"
+                    >Happy Number</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create a set to track number that has been explored to avoid
+                    stuck in a cycle.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/happy-number.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="plus-one">
+                  <a
+                    href="https://leetcode.com/problems/plus-one/"
+                    target="_blank"
+                    >Plus One</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create another vector which contains carry of each position.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/plus-one.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="pow-x-n">
+                  <a
+                    href="https://leetcode.com/problems/powx-n/"
+                    target="_blank"
+                    >Pow(x-n)</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Instead of multiply x one by one, we can do x *= x in each
+                    iteration, and update count by count *= 2 or count /= 2.
+                    Only update ans if count % 2 == 1.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/pow(x-n).cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="rotate-image">
+                  <a
+                    href="https://leetcode.com/problems/rotate-image/"
+                    target="_blank"
+                    >Rotate Image</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create 4 pointers, left, right, top and bottom. While left
+                    &lt; right, loop for i in range(right - left), first save
+                    top left, then shift bottom left to top left, bottom right
+                    to bottom left, top right to bottom right and then top left
+                    to top right. Need to make use of i, so everytime top, left,
+                    right and bottom need to +/- i accordingly.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/rotate-image.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="spiral-matrix">
+                  <a
+                    href="https://leetcode.com/problems/spiral-matrix/"
+                    target="_blank"
+                    >Spiral Matrix</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create 4 pointers, left, right, top and bottom. While left
+                    &lt;= right and top &lt;= bottom, go through first row left
+                    to right, then top++, last col top to bottom, then right--,
+                    if top &lt;= bottom, last row right to left, (bottom++ no
+                    matter what), if left &lt;= right, first col bottom to top,
+                    left++ no matter what.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/spiral-matrix.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="set-matrix-zeroes">
+                  <a
+                    href="https://leetcode.com/problems/set-matrix-zeroes/"
+                    target="_blank"
+                    >Set Matrix zeroes</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    A good way to store needed 2d positions is to create a
+                    vector of vector that store (row, col) in the format {{r1,
+                    c1}, {r2, c2}}, so to avoid 2d matrix. Once this is created,
+                    simply replace their corresponding row and col to zeroes.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/set-matrix-zeroes.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="detect-squares">
+                  <a
+                    href="https://leetcode.com/problems/detect-squares/"
+                    target="_blank"
+                    >Detect Squares</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The problem asks that by given a point, find if it can form
+                    a square with any 3 points existed in the class. To check if
+                    it can form a square, first check if there exists a diagonal
+                    point (x, y) such that abs(x - pt_x) == abs(y - pt_y) and
+                    they are not equal. If this is true, further check that if
+                    there exists two point p1 and p2 such that p1 = (x, pt_y)
+                    and p2 = (pt_x, y). If this is again true, the number of
+                    cycle it can form will be number of p1 * number of p2. Check
+                    for all points in the class.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/maths/detect-squares.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

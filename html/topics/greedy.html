@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Greedy</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Gree<span>dy</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content greedy">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="maximum-subarray">
+                  <a
+                    href="https://leetcode.com/problems/maximum-subarray/"
+                    target="_blank"
+                    >Maximum Subarray</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Check for each number in the array, if that number is larger
+                    than current sum, if yes update current sum to that number,
+                    if not then take current sum + number. Track only the
+                    maximum current sum. This approach is called Kadane's
+                    algorithm.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/max-subarray.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="jump-game">
+                  <a
+                    href="https://leetcode.com/problems/jump-game/"
+                    target="_blank"
+                    >Jump Game</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The trick is we can move the goal position forward. At first
+                    the goal position is at len(nums) - 1, then starting from
+                    len(nums) - 2 to 0, say i, if i >= goal_pos, update goal_pos
+                    to i. At last, check if goal_pos is reachable from index 0.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/jump-game.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="jump-game-ii">
+                  <a
+                    href="https://leetcode.com/problems/jump-game-ii/"
+                    target="_blank"
+                    >Jump Game II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For each position, create a left and right pointer
+                    corresponding to the possible next positions reachable by
+                    current position. Be greedy and always jump to the next
+                    farthest position. This can be achieved by farhtest =
+                    max(farthest, nums[curr] + curr), where curr is in
+                    range(left, right + 1).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/jump-game-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="gas-station">
+                  <a
+                    href="https://leetcode.com/problems/gas-station/"
+                    target="_blank"
+                    >Gas Station</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    First check if sum(gas) - sum(cost) &lt; 0, if true simply
+                    return -1. Else, check from idx 0 to len(gas) - 1, keep
+                    track of the total gas consumption, if total &lt; 0 simply
+                    set another starting point to idx + 1. This guarantees an
+                    answer.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/gas-station.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="hand-of-straights">
+                  <a
+                    href="https://leetcode.com/problems/hand-of-straights/"
+                    target="_blank"
+                    >Hand of Straights</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a hash table that stores each card with its
+                    corresponding card count, and another min heap that will
+                    always give the current minimum card value to form a group.
+                    If a consecutive card cannot be found or current top number
+                    in the min heap is not equal to the value that is going to
+                    pop, return FALSE. Else, decrease card count by 1 for each
+                    time a card is found.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/hand-of-straights.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="merge-triplets-to-form-target-triplet">
+                  <a
+                    href="https://leetcode.com/problems/merge-triplets-to-form-target-triplet/"
+                    target="_blank"
+                    >Merge Triplets to Form Target Triplet</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a set to check if any number in the target triplet is
+                    found. The set will store the index of the found number.
+                    Then, check for each triplet, skip those triplet which has a
+                    value > target, and if a value matched the target number
+                    value, add that index to the set. After the loop, check if
+                    the size of the set is 3, if not return false.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/merge-triplets-to-form-target-triplets.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="partition-labels">
+                  <a
+                    href="https://leetcode.com/problems/partition-labels/"
+                    target="_blank"
+                    >Partition Labels</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a hash map that will store the last occurence of each
+                    character in the string. Then, for each character in the
+                    string, greedily increase the sliding window.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/partition-labels.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="valid-parenthesis-string">
+                  <a
+                    href="https://leetcode.com/problems/valid-parenthesis-string/"
+                    target="_blank"
+                    >Valid Parenthesis String</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create two stacks, one stack stores left parenthesis index
+                    position, another one stores star index position. When
+                    encounter right parenthesis, first pop left paren stack if
+                    it is not empty, else pop star stack. After iterating each
+                    character in string, check if left parent is not empty, if
+                    true then check if star is not empty and the top index is
+                    larger than top index of left paren.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/greedy/valid-parentheses-string.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

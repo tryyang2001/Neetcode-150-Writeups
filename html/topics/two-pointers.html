@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Two Pointers</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Two <span>Pointers</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content">
+        <div class="table-responsive two-pointers">
+          <table class="table table-striped table-bordered table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="valid-palindrome">
+                  <a
+                    href="https://leetcode.com/problems/valid-palindrome/"
+                    target="_blank"
+                    >Valid Palindrome</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create left and right pointer, check if both characters are
+                    same. Need to keep checking left &lt; right when moving both
+                    pointers.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/two-pointers/valid-palindrome.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="two-sum-ii">
+                  <a
+                    href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+                    target="_blank"
+                    >Two Sum II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Since the array is sorted, create left and right pointers
+                    and do binary search method to determine the indices.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/two-pointers/two-sum-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="three-sum">
+                  <a href="https://leetcode.com/problems/3sum/" target="_blank"
+                    >Three Sum</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Sort the array, for each number, first ensure it is not same
+                    as its previous number, and then find the two sum using left
+                    and right pointer. Need to prevent left pointer points to
+                    the same number when a solution is found.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/two-pointers/three-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="container-with-most-water">
+                  <a
+                    href="https://leetcode.com/problems/container-with-most-water/"
+                    target="_blank"
+                    >Container With Most Water</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Use left and right pointer, record largest possible area,
+                    update left if min_height is left, update right if
+                    min_height is right.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/two-pointers/container-with-most-water.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="trapping-rain-water">
+                  <a
+                    href="https://leetcode.com/problems/trapping-rain-water/"
+                    target="_blank"
+                    >Trapping Rain Water</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create two pointers left and right that first point at index
+                    0 and last index. Then when going through each position, to
+                    determine how many water it can trap, it only depends on the
+                    height of one side (either left/right). The formula is
+                    either left_max - height[left] or right_max - height[right].
+                    To determine when to move which pointer (left/right), check
+                    if left_max &lt; right_max, if yes update left, else updates
+                    right. left_max and right_max should keep track of highest
+                    height.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/two-pointers/trapping-rain-water.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

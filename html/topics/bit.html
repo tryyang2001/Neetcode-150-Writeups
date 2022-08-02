@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Bit Manipulation</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Bit <span>Manipulation</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content bit">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="single-number">
+                  <a
+                    href="https://leetcode.com/problems/single-number/"
+                    target="_blank"
+                    >Single Number</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Since the question gurantees that there is only one number
+                    that does not have its duplicates, the rest of the numbers
+                    all repeated twice. And we know that a XOR a = 0, so if we
+                    XOR all the numbers in the array, we will finally obtain
+                    that single number.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/single-number.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="number-of-1-bits">
+                  <a
+                    href="https://leetcode.com/problems/number-of-1-bits/"
+                    target="_blank"
+                    >Number of 1 Bits</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The input is fixed length of 32. Create a mask initially =
+                    1, and then keep left shift by 1 to check each position
+                    contains 1 or 0.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/number-of-1-bit.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="#counting-bits">
+                  <a
+                    href="https://leetcode.com/problems/counting-bits/"
+                    target="_blank"
+                    >Counting Bits</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For each number generated, count how many 1 it holds. Record
+                    te result in an array.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/counting-bits.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="reverse-bits">
+                  <a
+                    href="https://leetcode.com/problems/reverse-bits/"
+                    target="_blank"
+                    >Reverse Bits</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Since input is a fixed size 32 bits integer, the way to
+                    reverse is that we check from rightmost everytime if that
+                    digit holds 1, ans += 1 &lt;&lt; (31 - i), where i is the
+                    bit position.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/reverse-bit.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="#missing-number">
+                  <a
+                    href="https://leetcode.com/problems/missing-number/"
+                    target="_blank"
+                    >Missing Number</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    One simple approach is that we first calculate cumulative
+                    sum of n, then for each number in the array, sum -= num. In
+                    the end sum will store the only missing number. Another
+                    approach of bit manipulation is that we first calculate the
+                    result after XOR all the numbers from 0 to n. Then in the
+                    given array, we again XOR result with num, and eventually we
+                    will get the only missing number.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/missing-number.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="sum-of-two-integers">
+                  <a
+                    href="https://leetcode.com/problems/sum-of-two-integers/"
+                    target="_blank"
+                    >Sum of Two Integers</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Loop while b is not 0, Sum bit = a XOR b, carry bit =
+                    (unsigned int)(a&b)&lt;&lt;i, since when both digits contain
+                    1, carry = 1. Then update a to sum_bit and b to carry.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/sum-of-two-integers.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="reverse-integer">
+                  <a
+                    href="https://leetcode.com/problems/reverse-integer/"
+                    target="_blank"
+                    >Reverse Integer</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Non-bit-manipulation approach is to push each digit to
+                    stack, and when popping from stack, times 10 to its
+                    corresponding power to the digit.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/bit/reverse-integer.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

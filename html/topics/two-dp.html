@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>2-D Dynamic Programming</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>2-D Dynamic <span>Programming</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content two-d-dp">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="unique-paths">
+                  <a
+                    href="https://leetcode.com/problems/unique-paths/"
+                    target="_blank"
+                    >Unique Paths</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create 2D array called dp, since it can only moves right or
+                    down, all positions in first row and first column will be 1.
+                    Then, for remaining position i, j, dp[i][j] = dp[i-1][j] +
+                    dp[i][j-1].
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/unique-paths.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="longest-common-subsequence">
+                  <a
+                    href="https://leetcode.com/problems/longest-common-subsequence/"
+                    target="_blank"
+                    >Longest Common Subsequence</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a 2d vector DP of size text1.size() + 1 and
+                    text2.size() + 1. Create two pointers i, j representng text1
+                    and text2. If text1[i] == text2[i], dp[i][j] = 1 +
+                    dp[i+1][j+1], else, dp[i][j] = max(dp[i+1][j], dp[i][j+1]).
+                    This is bottom-up approach. At last, dp[0][0] stores the
+                    answer.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/longest-common-subsequence.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="best-time-to-buy-and-sell-stock">
+                  <a
+                    href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/"
+                    target="_blank"
+                    >Best Time to Buy and Sell Stock With Cooldown</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a hash map with key {index, buy}, where index
+                    represents the day of buying/selling, while buy represents a
+                    boolean of buy/sell. The value of the hash table will be the
+                    max profit obtainable. In each day, a person can either
+                    buy/cooldown, or sell/cooldown. So only two actions are
+                    possible in each day. He must buy before he can sell, and
+                    when he sells, idx + 2 need to be applied to enforce the 1
+                    day cooldown period. After looping through the entire prices
+                    array, return profit_table[0][buying].
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/best-time-to-buy-and-sell-stock-with-cooldown.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="target-sum">
+                  <a
+                    href="https://leetcode.com/problems/target-sum/"
+                    target="_blank"
+                    >Target Sum</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    This question is to assign two possible operator to each
+                    number, so for each number there is two possible actions,
+                    one is to assign + sign and one is to assign - sign. Try
+                    them both, and store the result in a hash table with key =
+                    {idx, cumulative_sum}, value = number of ways to obtain the
+                    target value. After looping through the entire nums array,
+                    returned dp[0][0] as it stores the total number of ways.
+                    (This is a type of decision tree)
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/target-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="interleaving-string">
+                  <a
+                    href="https://leetcode.com/problems/interleaving-string/"
+                    target="_blank"
+                    >Interleaving String</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Having two indices i and j representing string s1 and s2.
+                    s3[i+j] will be the current position of s3. For each
+                    character in s3 finds if there is a matching character in s1
+                    or s2. If both are matched, need to test two of them. Store
+                    the result in a hash map with key = {i, j} and value =
+                    true/false, where tru means there exists a solution. This is
+                    to prevent repeating tree pattern. So for each i and j,
+                    continue only if there is a matching case and dfs(i + 1, j)
+                    or (i, j + 1) returns true.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/interleaving-string.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="longest-increasing-path-in-a-matrix">
+                  <a
+                    href="https://leetcode.com/problems/longest-increasing-path-in-a-matrix/"
+                    target="_blank"
+                    >Longest Increasing Path in a Matrix</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a 2D dp vector to store longest path of each
+                    position. Each position guarantees a minimum of 1 length.
+                    Create a loop to find the longest path of each position, and
+                    find the longest path ever. The way to find longest path is
+                    to do DFS, once we find the result we must store the value
+                    in the 2D dp so that we do not need to repeat work.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/longest-increasing-path-in-a-matrix.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="distinct-subsequences">
+                  <a
+                    href="https://leetcode.com/problems/distinct-subsequences/"
+                    target="_blank"
+                    >Distinct Subsequences</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do DFS with a hash table with key = {i, j} where i
+                    represents the idx of s and j is the idx of t. For each
+                    character in s, if s[i] == t[j], do dfs for both include the
+                    character and not include the character. If s[i] != t[j], do
+                    dfs for not include the character. At last return dp[0][0].
+                    Take note that when j out of bound, it means t is
+                    successfully constructed from s, and if s is out of bound, t
+                    cannot be constructed using current combination of
+                    characters. Also take note that checking t out of bound need
+                    to be done first before checking s! This is a problem of
+                    decision tree as well.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/distinct-subsequences.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="edit-distance">
+                  <a
+                    href="https://leetcode.com/problems/edit-distance/"
+                    target="_blank"
+                    >Edit Distance</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    If word1.size() == 0, needs word2.size() operations, vice
+                    versa. If both word1 and word2 are empty, needs 0 operation.
+                    Other than that, create a 2D dp vector to speed up the
+                    checking. Note that if word1[i] == word2[j], simply move on
+                    to (i+1, j+1). If insertion is needed, it will be (i, j+1).
+                    If deletion is needed, it will be (i+1, j), and replacement
+                    is also (i+1, j+1). When doing an action, need to +1
+                    additionally. This pattern tells us that we need to do
+                    bottom-up dp approach. The size of the dp will be
+                    word1.size() + 1 and word2.size() + 1. The last col will be
+                    word1.size() in decreasing order, and the last row will be
+                    word1.size() in decreasing order. Then for each position (i,
+                    j), if word1[i] == word2[j], dp[i][j] = dp[i+1][j+1], else
+                    dp[i][j] = min(dp[i+1][j], dp[i][j+1], dp[i+1][j+1]) + 1.
+                    Return dp[0][0]. This is a problem of 2D matrix bottom up dp
+                    approach.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/edit-distance.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="burst-balloons">
+                  <a
+                    href="https://leetcode.com/problems/burst-balloons/"
+                    target="_blank"
+                    >Burst Balloons</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For each balloon exists in the array, pretend it will be
+                    popped last, so the earning coin value will be nums[left-1]
+                    + nums[curr] + nums[right+1] + dfs(left, i - 1) + dfs(i + 1,
+                    right). Left and right pointers will point to the first
+                    element and last element, and when out of bound the value is
+                    1. Return dp[1][nums.size()-1] as the answer, since we
+                    insert additional 1 at the front and 1 at the back.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/burst-balloons.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="regualr-expression-matching">
+                  <a
+                    href="https://leetcode.com/problems/regular-expression-matching/"
+                    target="_blank"
+                    >Regular Expression Matching</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    '*' must follow a character. So when encounter a '*', we
+                    have two choices, one is don't use it and directly jump to
+                    the next, one is to use it, but the leading character must
+                    match first. So for each position in pattern p, we check if
+                    curr_pos + 1 is a '*', if this is true, when we don't use
+                    '*', jump to (s_idx, curr_pos + 2), if used, the condition
+                    must be matched and (s_idx + 1, curr_pos). For normal
+                    character like the matching alphabets and the '.' character,
+                    simply do (s_idx + 1, curr_pos + 1). When either dfs gives
+                    false, returned false.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/2-d-dynamic-programming/regular-expression-matching.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Stacks</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Stack<span>s</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content">
+        <div class="table-responsive stack">
+          <table class="table table-striped table-bordered table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="valid-parantheses" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/valid-parentheses/"
+                    target="_blank"
+                    >Valid Parantheses</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create stack to check, take note of closing brackets that
+                    come first in the string and also single bracket case.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/valid-parentheses.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="evaluate-reverse-polish-notation">
+                  <a
+                    href="https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+                    target="_blank"
+                    >Evaluate Reverse Polish Notation</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create stack, push only numbers to stack, when encountering
+                    operator, pop from stack twice, perform operation and then
+                    push the ans back to the stack.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/evaluate-reverse-polished-notation.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="generate-parantheses">
+                  <a
+                    href="https://leetcode.com/problems/generate-parentheses/"
+                    target="_blank"
+                    >Generate Parantheses</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    (For C++) Create deque, push_back and pop_front to generate
+                    parantheses, do backtrack to generate all possibilities. The
+                    rule is open bracket count >= close_bracket_count
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/generate-parantheses.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="daily-temperatures">
+                  <a
+                    href="https://leetcode.com/problems/daily-temperatures/"
+                    target="_blank"
+                    >Daily Temperatures</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create priority queue that keep track of temperatures and
+                    will update days needed to wait when a new temperature from
+                    a future day is detected.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/daily-temperature.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="car-fleet">
+                  <a
+                    href="https://leetcode.com/problems/car-fleet/"
+                    target="_blank"
+                    >Car Fleet</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create vector of pair(position, time). Two cars form a
+                    cluster if time_prev - time_next &lt;=0. Add cluster count
+                    if two adjacent cars not colliding.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/car-fleet.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="min-stack">
+                  <a
+                    href="https://leetcode.com/problems/min-stack/"
+                    target="_blank"
+                    >Min Stack</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a stack of pair of int, first integer stores the
+                    value, and second integer stores the current min when the
+                    value is pushed to the stack.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/min-stack.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="largest-rectangle-in-histogram">
+                  <a
+                    href="https://leetcode.com/problems/largest-rectangle-in-histogram/"
+                    target="_blank"
+                    >Largest Rectangle in Histrogram</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a stack that stores curr_idx and heights[i]. If two
+                    consecutive heights are in increasing order, simply push and
+                    check the next height. If two consecutive heights are in
+                    descending order, pop all heights that are smaller than
+                    heights[i], and also compute their largest possible
+                    rectangle. Pop until no more heights in stack is less than
+                    heights[i]. We then push heights[i] and the last popped
+                    index to the stack. Once we scan through the heights array,
+                    we need to check if there exists maximum area of rectangle
+                    in the stack before we output the answer. This solution
+                    takes O(n)!
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/stack/largest-rectangle-in-histrogram.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

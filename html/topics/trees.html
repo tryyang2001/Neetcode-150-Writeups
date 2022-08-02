@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Trees</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Tree<span>s</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content trees">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="invert-binary-tree">
+                  <a
+                    href="https://leetcode.com/problems/invert-binary-tree/"
+                    target="_blank"
+                    >Invert Binary Tree</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Do DFS until reaching leaf node, then swap left and right.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/invert-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="maximum-depth-of-binary-tree">
+                  <a
+                    href="https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+                    target="_blank"
+                    >Maximmum Depth of binary Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    While curr node has child, go as deep as possible and update
+                    max_depth.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/max-depth-of-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr id="diameter-of-binary-tree">
+                <td>
+                  <a
+                    href="https://leetcode.com/problems/diameter-of-binary-tree/"
+                    target="_blank"
+                    >Diameter of Binary Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For each node, find its leftmost and rightmost depth, and
+                    record the largest diameter found so far. When all nodes
+                    have been traversed, the longest diameter will be found.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/diameter-of-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="balanced-binary-tree">
+                  <a
+                    href="https://leetcode.com/problems/balanced-binary-tree/"
+                    target="_blank"
+                    >Balanced Binary Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The condition for a balanced binary tree is that the
+                    abs(height[left] - height[right]) &lt;=1. (Provided that
+                    height[leaf] = 0). To calculate height, height[node] =
+                    height[child] + 1. If any of the subtree of current node is
+                    not balanced, simply return false.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/balanced-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="same-tree">
+                  <a
+                    href="https://leetcode.com/problems/same-tree/"
+                    target="_blank"
+                    >Same Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Check if each node matches one another, and there is no
+                    extra node in any tree.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/same-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="subtree-of-another-tree">
+                  <a
+                    href="https://leetcode.com/problems/subtree-of-another-tree/"
+                    target="_blank"
+                    >Subtree of Another Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    If current node == sub, check all sub trees. If not exactly
+                    matched, need to continue by searching through
+                    dfs(curr->left) || dfs(curr->right).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/subtree-of-another-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="lowest-common-ancestor-of-a-bst">
+                  <a
+                    href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+                    target="_blank"
+                    >Lowest Common Ancestor of a BST</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Starting at root, if p->val &lt; root->val and q->val >
+                    root->val, then the LCA will be root, else if both &lt;
+                    root->val then LCA will be at root->left, so traverse
+                    root->left. Else traverse root->right.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/lowest-common-ancestor-of-bst.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="binary-tree-level-order-traversal">
+                  <a
+                    href="https://leetcode.com/problems/binary-tree-level-order-traversal/"
+                    target="_blank"
+                    >Binary Tree Level Order Traversal</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do BFS on tree. First push root to frontier, while frontier
+                    is not empty, for every node in frontier, pushes all its
+                    children to the frontier, and add current node to a vector.
+                    This is how to create level-order traversal.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/cb9c6e2ef0f7890aec3abc2a2b7cf1cf0bb32033/trees/binary-tree-level-order-traversal.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="binary-tree-right-side-view">
+                  <a
+                    href="https://leetcode.com/problems/binary-tree-right-side-view/"
+                    target="_blank"
+                    >Binary Tree Right Side View</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a stack to store visited nodes. We will push
+                    curr->left to the node first, then curr->right so that when
+                    we pop from the stack we will get the rightmost node. Also,
+                    we keep track of current max_level so that for each node, it
+                    must at least have level == max_level so that we will add it
+                    to the view.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/binary-tree-right-side-view.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="count-good-nodes-in-binary-tree">
+                  <a
+                    href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/"
+                    target="_blank"
+                    >Count Good Nodes in Binary Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Do DFS, keep track of curr_max along the path, so if
+                    curr->val > curr_max, count++, else go explore its children.
+                    Must traverse all nodes to determine.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/count-good-node-in-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="validiate-binary-search-tree">
+                  <a
+                    href="https://leetcode.com/problems/validate-binary-search-tree/"
+                    target="_blank"
+                    >Validate Binary Search Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Notice that by doing in-order traversal in BST, we will get
+                    the nodes in sorted order. Simply check if curr->val >
+                    prev->val, if not return false. This optimizes space and
+                    time.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/validate-bst.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="kth-smallest-element-in-a-bst">
+                  <a
+                    href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+                    target="_blank"
+                    >k-th Smallest Element in a BST</a
+                  >
+                </td>
+                <td>
+                  <p>Construct in-order traversal, stop when the size == k.</p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/kth-smallest-element-in-bst.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  id="construct-binary-tree-from-preorder-and-inorder-traversal"
+                >
+                  <a
+                    href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+                    target="_blank"
+                    >Construct Binary Tree From Preorder and Inorder Traversal
+                  </a>
+                </td>
+                <td>
+                  <p>
+                    Preorder guarantees root at 0 indexed, then we try to find
+                    root in inorder, partition its left to root->left and right
+                    to root->right. In pre-order, the next mid elements will be
+                    in the left, and the remaining will be in the right, where
+                    mid = index of inorder where its value = preorder[0].
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/construct-binary-tree-from-pre-and-in-order.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="binary-tree-maximum-path-sum">
+                  <a
+                    href="https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+                    target="_blank"
+                    >Binary Tree Maximum Path Sum</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    There are two possibilities to get path sum, one is
+                    max_path(curr->left) + curr->val + max_path(curr->right),
+                    one is parent(curr) + curr->val + max(max_path(curr->left),
+                    max_path(curr->right)). Need to check both path sum and only
+                    store the maximum path sum to the global variable.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/binary-tree-max-path-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="serialize-and-deserialize-binary-tree">
+                  <a
+                    href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
+                    target="_blank"
+                    >Serialize and Deserialize Binary Tree</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    From a binary tree, create its pre-order traversal and then
+                    store as a string (each node can be separated by whitespace,
+                    NULL need to be represented as N or smth else). Then from
+                    the string, we can construct the binary tree back, since we
+                    know the root, and that for each node, we know if it
+                    contains children or is just a leaf node.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/trees/serialize-and-deserialize-binary-tree.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

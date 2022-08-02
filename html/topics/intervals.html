@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Intervals</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Interval<span>s</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content intervals">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="insert-interval">
+                  <a
+                    href="https://leetcode.com/problems/insert-interval/"
+                    target="_blank"
+                    >Insert Interval</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    The rationale is to find the suitable position to insert and
+                    update the intervals. First, for every interval that is
+                    smaller than newInterval, simply add that interval to the
+                    answer vector. Then, when we finally reached the correct
+                    position to insert new interval, we create a while loop such
+                    that we keep updating new interval to min(intervals[i][0],
+                    newInterval[0]) and max(intervals[i][1], newInterval[1]).
+                    When we stop the while loop we then insert the newInterval
+                    into our answer vector. Finally insert all the remaining
+                    intervals.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/insert-interval.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="merge-intervals">
+                  <a
+                    href="https://leetcode.com/problems/merge-intervals/"
+                    target="_blank"
+                    >Merge Intervals</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    First loop from index 0 to second last index. If
+                    intervals[i] and intervals[i+1] has no intersection, simply
+                    add intervals[i] to ans vector, else update
+                    intervals[i+1][0] = intervals[i][0] and intervals[i+1][1] =
+                    max(intervals[i][1], intervals[i+1][1]). Remember to add the
+                    last interval to the answer vector once the loop is done.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/merge-intervals.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="#non-overlapping-intervals">
+                  <a
+                    href="https://leetcode.com/problems/non-overlapping-intervals/"
+                    target="_blank"
+                    >Non Overlapping Intervals</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Loop from index 0 to second last. When we found that two
+                    intervals have intersection, greedily minimizing
+                    intervals[i+1] to minimize the number of intervals required
+                    to remove.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/non-overlapping-interval.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="meeting-room">
+                  <a
+                    href="https://www.youtube.com/watch?v=PaJxqZVPhbg"
+                    target="_blank"
+                    >Meeting Rooms</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Sort the intervals array, and then check if any
+                    intervals[i][1] &lt; intervals[i+1][0], simply returned
+                    false if this is found. Else returned true.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/meeting-room.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="meeting-rooms-ii">
+                  <a
+                    href="https://www.youtube.com/watch?v=FdzJmTCVyJU"
+                    target="_blank"
+                    >Meeting Rooms II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    In this problem, we need to count the number of rooms
+                    needed. The fastest way is to create two arrays, start and
+                    end, where start array will store the start time of all
+                    intervals in sorted order, and end array will store the end
+                    time in sorted order. Create two pointer i and j, if
+                    start[i] &lt; end[j], increases i and j remains the same,
+                    else increase j and i remains the same. Once i is out of
+                    bound, the remaining end time in the end array will be the
+                    answer.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/meeting-room-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="minimum-interval-to-include-each-query">
+                  <a
+                    href="https://leetcode.com/problems/minimum-interval-to-include-each-query/"
+                    target="_blank"
+                    >Minimum Interval to Include Each Query</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Sort intervals array, and create copy of queries array,
+                    together with its query index in a new array with element as
+                    pair(query, idx). Then sort the copied queries. After that,
+                    whenever we found a valid interval (that means query is in
+                    range), push it to a priority_queue with format
+                    (interval_size, right_limit of the interval). The interval
+                    size is used to determine the minimum interval while the
+                    right limit is used to determine if current interval is
+                    valid for the given query (since the interval can be from
+                    last query executed).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/intervals/min-interval-to-include-each-query.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

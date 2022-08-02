@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Backtracking</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Back<span>tracking</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content backtracking">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="col-2">
+                <td id="subsets">
+                  <a
+                    href="https://leetcode.com/problems/subsets/"
+                    target="_blank"
+                    >Subsets</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    For each element, choose between add or don't add to. When
+                    insert the correct permutation into the list, make sure to
+                    copy the permutation list.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/subsets.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="subsets-ii">
+                  <a
+                    href="https://leetcode.com/problems/subsets-ii/"
+                    target="_blank"
+                    >Subsets II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    First sort the array, and then choose between add or don't
+                    add. When don't add, before recursively call the
+                    backtracking function, update idx to position of next unique
+                    elements (Don't do recursion on duplicates).
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/subset-with-repeats.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="permutations">
+                  <a
+                    href="https://leetcode.com/problems/permutations/"
+                    target="_blank"
+                    >Permutations</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Keep popping the first element in the array until size is 1,
+                    and then add back removed elements back.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/permutations.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="combination-sum">
+                  <a
+                    href="https://leetcode.com/problems/combination-sum/"
+                    target="_blank"
+                    >Combination Sum</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    For each numbers can choose between add or don't add. Stop
+                    recursion when the sum > target or index out of bound. Add
+                    idx by 1 if don't add, else don't change idx since reuse of
+                    the same number is allowed.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/combination-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="combination-sum-ii">
+                  <a
+                    href="https://leetcode.com/problems/combination-sum-ii/"
+                    target="_blank"
+                    >Combination Sum II</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Since reuse is not allowed, increase idx in every recursion.
+                    Also, sort the array in the start to prevent duplicates.
+                    Jump to the next element that is not same as previous when
+                    duplicates found. Idea much similar as combination sum.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/combination-sum-ii.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://leetcode.com/problems/word-search/"
+                    target="_blank"
+                    >Word Search</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Brute force approach only applicable to Python. For each
+                    character in the board, search through four possible
+                    direction, don't search repeated position.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/word-search.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="palindrome-partitioning">
+                  <a
+                    href="https://leetcode.com/problems/palindrome-partitioning/"
+                    target="_blank"
+                    >Palindrome Partitioning</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Brute force find all possible partitions. Verify if current
+                    substring is a palindrome then continue do recursion, else
+                    stop.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/palindrome-partitioning.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="letter-combination-of-a-phone-number">
+                  <a
+                    href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+                    target="_blank"
+                    >Letter Combinations of a Phone Number</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create map that maps digit to string availables. Then do DFS
+                    to generate all possible string combinations.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/letter-combination-of-phone-number.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="n-queen">
+                  <a
+                    href="https://leetcode.com/problems/n-queens/"
+                    target="_blank"
+                    >N-Queen</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    The trick here is that we try putting queen in each row
+                    (increasing order), then in each row we try putting queen in
+                    each col only if it is valid. To determine if it is valid,
+                    we check if the current position (row, col) is column-safe,
+                    and is also diagonally safe. To check diagonally safe, we
+                    can check if every positive and negative diagonals in all
+                    rows above current row does not contain a queen piece. We do
+                    not need to check if current pos is row-safe since we used
+                    different row everytime we do the DFS. We also dun need to
+                    check rows below current row is because we guarantee there
+                    is no queen below current row.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/backtracking/n-queen.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

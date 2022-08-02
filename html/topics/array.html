@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Array & Hashing</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Array & <span>Hashing</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content">
+        <div class="table-responsive array-and-hashing">
+          <table class="table table-striped table-bordered table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="contains-duplicate" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/contains-duplicate/"
+                    target="_blank"
+                    >Contains Duplicate</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    Create set and check if current character already exists in
+                    the set.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/array.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="valid-anagram" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/valid-anagram/"
+                    target="_blank"
+                    >Valid Anagram</a
+                  >
+                </td>
+                <td class="col-10">
+                  Create character reference array (size of 26), count the
+                  frequency of the character and ensure both string has same
+                  character frequency.
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/valid-anagram.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="two-sum" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/two-sum/"
+                    target="_blank"
+                    >Two Sum</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    Create map, record index of each value, and try to find
+                    (target - current_value) in the map, if found return the
+                    solution.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/two-sum.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="group-anagrams" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/group-anagrams/"
+                    target="_blank"
+                    >Group Anagrams</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    Create a map that maps sorted string in the array to a
+                    vector of string. Sorted string as the key will ensure group
+                    correctness
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/group-anagram.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="top-k-frequent-elements" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/top-k-frequent-elements/"
+                    target="_blank"
+                    >Top K Frequent Elements</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    Create a map to count frequency, by knowing the maximum
+                    frequency, create another vector of vector, which will store
+                    the numbers according to the frequency
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/top-k-frequent-element.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="product-of-array-except-self" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/product-of-array-except-self/"
+                    target="_blank"
+                    >Product of Array Except Self</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    First find the product of all numbers in the array, and
+                    count the number of zero in the array, if zero_count > 1
+                    then the ans will be all zeros, else if zero_count == 1,
+                    calculate the max_product without multiplying 0, and then
+                    for position of number 0, return max_product value, the rest
+                    will be 0.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/product-array-except-self.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="valid-sudoku" class="col-2">
+                  <a
+                    href="https://leetcode.com/problems/valid-sudoku/"
+                    target="_blank"
+                    >Valid Sudoku</a
+                  >
+                </td>
+                <td class="col-10">
+                  <p>
+                    Check if each row and col contains duplicates, for square
+                    checking, loop for each row, and check for each column, and
+                    separates square 1, 2 and 3.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/valid-sudoku.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="longest-consecutive-sequence">
+                  <a
+                    href="https://leetcode.com/problems/longest-consecutive-sequence/"
+                    target="_blank"
+                    >Longest Consecutive Sequence</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Change vector to set, find how many possible sequence in the
+                    vector (by checking if n - 1 exists given n), if n is the
+                    start of the sequence, continuously check if n+1 exists.
+                    Record the longest length.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/0d66719672fc5714065413b870e8ca7a23eaf010/array/longest-consecutive-sequence.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../js/index.js"></script>
+  </body>
+</html>

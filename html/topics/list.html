@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/styles.css" type="text/css" />
+    <title>Linked Lists</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-btn">
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </div>
+      <div class="main-title">
+        <h2>Linked <span>Lists</span></h2>
+      </div>
+      <div class="author-title">
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="left-corner">
+        <div class="left-shape"></div>
+      </div>
+      <div class="main-content list">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Problem Names</th>
+                <th scope="col">Solution Writeups</th>
+                <th scope="col">Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2" id="#reverse-linked-list">
+                  <a
+                    href="https://leetcode.com/problems/reverse-linked-list/"
+                    target="_blank"
+                    >Reverse Linked List</a
+                  >
+                </td>
+                <td class="col-9">
+                  <p>
+                    The idea is that we first create a ListNode instance, then
+                    node->next = head->val, then we update head to head->next.
+                    Loop until head->next is null.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/reverse-linked-list.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="merge-two-linked-lists">
+                  <a
+                    href="https://leetcode.com/problems/merge-two-sorted-lists/"
+                    target="_blank"
+                    >Merge Two Linked Lists</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Simple like merging two sorted array, except that we need to
+                    create next pointer and update curr->next to that pointer
+                    and increase curr to curr->next.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/merge-two-sorted-lists.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="reorder-list">
+                  <a
+                    href="https://leetcode.com/problems/reorder-list/"
+                    target="_blank"
+                    >Reorder List</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a stack to store ListNode pointer so that we have
+                    access from back to front. To maintain the while loop, we
+                    need to ensure that the current size of the stack is >=
+                    current size of the list that is newly constructed.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/reordered-list.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="remove-n-th-node-from-end-of-list">
+                  <a
+                    href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+                    target="_blank"
+                    >Remove n-th Node From End of List</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a vector and store each pointer inside the vector to
+                    get access to all nodes. Then delete the nodes
+                    correspondingly.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/remove-nth-node-from-end-of-list.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="copy-list-with-random-pointer">
+                  <a
+                    href="https://leetcode.com/problems/copy-list-with-random-pointer/"
+                    target="_blank"
+                    >Copy List With Random Pointer</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a hash map that maps node pointer of original list to
+                    node pointer of new list in the first pass. In the second
+                    pass, copy the relation of next and random to the new nodes.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/copy-list-with-random-pointers.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="add-two-numbers">
+                  <a
+                    href="https://leetcode.com/problems/add-two-numbers/"
+                    target="_blank"
+                    >Add Two Numbers</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Take care of carry bit and sum bit. To ensure there is no
+                    leading zero, create another pointer that points to the
+                    second last and then set its next to NULL to prevent leading
+                    zero if required.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/add-two-numbers.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="linked-list-cycle">
+                  <a
+                    href="https://leetcode.com/problems/linked-list-cycle/"
+                    target="_blank"
+                    >Linked List Cycle</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Floyd algorithm is used to find the starting node of a
+                    cycle. The algorithm consists of two passes. In the first
+                    pass, create a fast and slow pointer, fast will jump twice
+                    while slow will jump once. When fast == slow, break the
+                    loop. Then by holding the current slow node pointer, create
+                    another slow pointer that starts jumping from head. In this
+                    second pass, both slow pointers will only jump once and then
+                    stop the loop when slow == slow2, this indicates a cycle is
+                    detected. If this is not the case, the linked list will
+                    reach its end/tail and no cycle is detected.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/linked-list-cycle.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="find-the-duplicate-number">
+                  <a
+                    href="https://leetcode.com/problems/find-the-duplicate-number/"
+                    target="_blank"
+                    >Find the Duplicate Number</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Since the size of the array is n + 1, and the range for each
+                    number inside is [1, n]. We treat array[0] as the head of a
+                    linked list, such that array[i] will points to the
+                    array[i]<sup>th</sup> node. Try to find the start of the
+                    cycle using Floyd algorithm and this will be the answer.
+                    O(n) TC and O(1) space. Great!
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/find-duplicate-number.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="lru-cache">
+                  <a
+                    href="https://leetcode.com/problems/lru-cache/"
+                    target="_blank"
+                    >LRU Cache</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    To be able to keep track of least used and most recently
+                    used cache, create a doubly linked list (with prev and
+                    next), and keep two pointers (head and tail) where head will
+                    point to the head of the doubly linked list and tail will
+                    point to the last element, note that head and tail pointer
+                    can be not used, so actual linked list will be (n+2) size.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/lru-cache.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="merge-k-sorted-lists">
+                  <a
+                    href="https://leetcode.com/problems/merge-k-sorted-lists/"
+                    target="_blank"
+                    >Merge k Sorted Lists</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    Create a function that merge two lists, then do this for
+                    each two lists in the array of list. Overwrite lists[i+1] to
+                    save memory.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/merge-k-sorted-list.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="reverse-nodes-in-k-group">
+                  <a
+                    href="https://leetcode.com/problems/reverse-nodes-in-k-group/"
+                    target="_blank"
+                    >Reverse Nodes in k-Group</a
+                  >
+                </td>
+                <td>
+                  <p>
+                    First create a reverse function that will reverse a given
+                    linked list. Then for each k nodes, select them out and
+                    reverse it. The main idea is to connect each segment. To do
+                    so, create a curr_prev pointer that will point to the
+                    curr_last node after reversed. Connect it to the next kth
+                    node if found, else simply connect to curr->next because
+                    there is no more node available. This will be an O(n)
+                    solution.
+                  </p>
+                </td>
+                <td class="col-1 table-code">
+                  <a
+                    href="https://github.com/tryyang2001/Neetcode-150/blob/540e01957a14dbb8bdb39f935d6652defb006cf2/linked-list/reverse-node-in-k-groups.cpp"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-corner">
+        <div class="right-shape"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
