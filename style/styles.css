@@ -93,6 +93,16 @@ header .author-title a i {
           clip-path: polygon(100% 0, 0 65%, 100% 100%, 0 100%, 0 68%, 0 0);
 }
 
+.documentation {
+  padding: 1.2rem 12rem;
+  padding-bottom: 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.documentation p {
+  text-align: justify;
+}
+
 .topic-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -192,4 +202,28 @@ header .author-title a i {
 .main-content table .table-code a:hover {
   color: var(--clr-grey-5);
   background-color: var(--clr-white);
+}
+
+@media screen and (max-width: 1200px) {
+  .documentation {
+    padding: 1.5rem;
+  }
+  .topic-links {
+    padding: 2rem;
+  }
+  .main-content {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .documentation {
+    padding: 1rem;
+  }
+  .topic-links {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.1rem;
+  }
+  .main-content {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

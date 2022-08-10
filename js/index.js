@@ -4,6 +4,7 @@ allTopicLinks.forEach((link) => {
   link.addEventListener("click", () => {
     let fileName =
       "./html/topics/" + link.className.replace("topic-link ", "") + ".html";
+    console.log(fileName);
     location.href = fileName;
   });
 });

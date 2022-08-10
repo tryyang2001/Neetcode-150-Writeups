@@ -1,0 +1,24 @@
+@media screen and (max-width: 1200px) {
+  .documentation {
+    padding: 1.5rem;
+  }
+  .topic-links {
+    padding: 2rem;
+  }
+  .main-content {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .documentation {
+    padding: 1rem;
+  }
+  .topic-links {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.1rem;
+  }
+  .main-content {
+    padding: 1rem;
+  }
+}

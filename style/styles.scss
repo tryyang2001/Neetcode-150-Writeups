@@ -95,6 +95,16 @@ header {
   clip-path: polygon(100% 0, 0 65%, 100% 100%, 0 100%, 0 68%, 0 0);
 }
 
+.documentation {
+  padding: 1.2rem 12rem;
+  padding-bottom: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  p {
+    text-align: justify;
+  }
+}
+
 .topic-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -196,3 +206,5 @@ header {
     }
   }
 }
+
+@import "./media";
